@@ -10,7 +10,9 @@ Hierarchy:
         - ref!! 1257b549-8b82-40f8-a3fa-152f6d2effe9
         - ref!! c47f5632-aa0c-46e5-a27d-ae592e3f4eb8
         - ref!! f1482e62-3e97-491c-8320-d441f528e358
-        - ref!! 974f1cab-5072-4a3a-82a3-4905ce7ec9e6
+        - ref!! f926c5c8-1d56-4d8d-90fc-a3946064ad65
+        - ref!! e844e5f7-75b9-4e16-8edf-b8298c565d61
+        - ref!! a27af791-767b-4ae6-b4ff-4f3327ef750a
     Parts:
         -   Entity:
                 Id: 1257b549-8b82-40f8-a3fa-152f6d2effe9
@@ -62,19 +64,35 @@ Hierarchy:
                         MouseRotationSpeed: {X: 1.0, Y: 1.0}
                         TouchRotationSpeed: {X: 1.0, Y: 0.7}
         -   Entity:
-                Id: 974f1cab-5072-4a3a-82a3-4905ce7ec9e6
-                Name: Sphere
+                Id: a27af791-767b-4ae6-b4ff-4f3327ef750a
+                Name: plateC
                 Components:
-                    8b672938a9f88f81a7e12cbac7534249: !TransformComponent
-                        Id: 58afe789-79aa-4e33-80a3-372bca2fa217
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    a77aa80a0a885395c3e9702543dd0a13: !TransformComponent
+                        Id: 9d9ec44f-8e2e-4250-9f27-348e57073ddf
+                        Position: {X: 0.93169296, Y: 0.9210375, Z: -4.622832}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    e3a8737100dffd9238bfcadd498eb052: !ModelComponent
-                        Id: 42eab188-18bc-4d02-a3a3-e1b7fb9fd0bf
-                        Model: 8a9966d8-c5fd-4936-9256-8e751fdad917:Sphere
+                    6ba8b0f49c8a238d92c3e44d556d337b: !ModelComponent
+                        Id: c7cdaf54-9796-4bbf-a9a8-2e7af78deb19
+                        Model: 89a24148-b30e-4429-a72a-ab0f6492a5b7:Models/plateC
                         Materials: {}
+                    d5d224d9e2a818f60ec0566e0622695c: !StaticColliderComponent
+                        Id: 10c22c17-e358-45d5-97d4-df8a230c5547
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            6a1849f96d1634fe78bb64b32a1d94ac: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.75, Y: 0.1, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: c47f5632-aa0c-46e5-a27d-ae592e3f4eb8
                 Name: Skybox
@@ -93,6 +111,19 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 753825b4-6559-48bc-b715-2863016e5d48:Skybox
         -   Entity:
+                Id: e844e5f7-75b9-4e16-8edf-b8298c565d61
+                Name: NavMeshA
+                Components:
+                    e6adf34ec10e2c878d322779cbcb8c84: !TransformComponent
+                        Id: 23ab5779-f04e-4be1-8267-8ec7a16351b2
+                        Position: {X: 0.0, Y: 0.0, Z: -0.16860938}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d17ec27e3035a825338d108dae9a56b5: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
+                        Id: 2ca05719-c8c1-4463-9b11-060f29dbc2fc
+                        Size: {X: 2.0, Y: 1.0, Z: 3.0}
+        -   Entity:
                 Id: f1482e62-3e97-491c-8320-d441f528e358
                 Name: Ground
                 Components:
@@ -106,3 +137,35 @@ Hierarchy:
                         Id: 98ceee8e-73ce-4372-b568-d0b2c426b129
                         Model: ff86a683-c750-45c3-aede-0c4d5a66048f:Ground
                         Materials: {}
+                    420ffde4b8886ed4c09701c7ac32f236: !StaticColliderComponent
+                        Id: bcc4d77c-f772-45ba-9bf9-676fe1281f6d
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            230279cdeb04dd4d549cf64cecaa9602: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Entity:
+                Id: f926c5c8-1d56-4d8d-90fc-a3946064ad65
+                Name: PlayerCharacter
+                Components:
+                    7f14d5a27901e8525318c27f6e6dc051: !TransformComponent
+                        Id: 00b4751a-923a-4389-8b85-c4af4050afbb
+                        Position: {X: 0.0, Y: 0.63217026, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.75, Y: 1.25, Z: 0.75}
+                        Children: {}
+                    4c54bafcbe5c9699e7819774350ef6b9: !ModelComponent
+                        Id: 47731cd0-54fe-46a2-a47a-82573dda963a
+                        Model: b1563fbb-63ea-4198-bf18-951a32e0b3dd:Cylinder
+                        Materials: {}
+                    0961d79aea48da388805f792558b41ef: !NavigationComponent
+                        Id: fd22c5de-0c98-460e-9565-107089991a9e
+                        NavigationMesh: 59a56ee2-94be-46aa-815b-20316648868b:CharacterNavagation
+                        GroupId: b21dfa66-9e9d-48e6-bb31-03f257295017
