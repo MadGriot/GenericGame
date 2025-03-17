@@ -1,0 +1,11 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericNewGame.Windows", "GenericNewGame.Windows\GenericNewGame.Windows.csproj", "{A50F2764-7792-42F9-9E7F-F17B97732B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericNewGame", "GenericNewGame\GenericNewGame.csproj", "{5BA2CA36-839A-4D9F-8D18-54A3C7F5A11F}"
+EndProject
+Global
+EndGlobal
