@@ -26,6 +26,7 @@ namespace GenericNewGame
 
         public override void Update()
         {
+            DebugText.Print($"{character.Transform.Position}", new Int2(40, 100));
             if (Input.IsMouseButtonPressed(MouseButton.Left))
             {
                 CleanupExistingPath();
@@ -41,14 +42,14 @@ namespace GenericNewGame
             {
                 return;
             }
-            Vector3 nextWaypoint = waypoints[waypointIndex];
+            Vector3 nextWaypoint = new Vector3(waypoints[waypointIndex].X, 0.625f, waypoints[waypointIndex].Z);
             Vector3 currentPosition = character.Transform.WorldMatrix.TranslationVector;
             float deltaTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
             float distance = Vector3.Distance(currentPosition, nextWaypoint);
 
             if (distance > 0.1f)
             {
-                var velocity = nextWaypoint - currentPosition;
+                Vector3 velocity = nextWaypoint - currentPosition;
                 velocity.Normalize();
                 velocity *= deltaTime * movementSpeed;
 

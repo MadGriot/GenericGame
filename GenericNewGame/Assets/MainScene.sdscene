@@ -120,7 +120,7 @@ Hierarchy:
                 Components:
                     d042f5f796ebfa32b827e8ae3b8f3c1d: !TransformComponent
                         Id: 10cb2dad-2a58-49d5-bc1b-9a49cb140d38
-                        Position: {X: 4.190535, Y: 0.1229808, Z: 1.0543094}
+                        Position: {X: 4.190535, Y: 0.5, Z: 1.0543094}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -141,7 +141,7 @@ Hierarchy:
                         ColliderShapes:
                             f32fe37cc911adae082cd5e45ed4fa6e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 2.0, Y: 1.0, Z: 1.0}
+                                Size: {X: 2.5, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
@@ -180,7 +180,7 @@ Hierarchy:
                 Components:
                     c451e2ea5b1aedf4ae904abcc2a6df47: !TransformComponent
                         Id: b3cfaa36-65f9-4878-a26e-455d9eaf6f9f
-                        Position: {X: 0.0, Y: -0.64610845, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -208,7 +208,7 @@ Hierarchy:
                 Components:
                     7f14d5a27901e8525318c27f6e6dc051: !TransformComponent
                         Id: 00b4751a-923a-4389-8b85-c4af4050afbb
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.625, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.75, Y: 1.25, Z: 0.75}
                         Children: {}
@@ -220,3 +220,17 @@ Hierarchy:
                         Id: fd22c5de-0c98-460e-9565-107089991a9e
                         NavigationMesh: 59a56ee2-94be-46aa-815b-20316648868b:CharacterNavagation
                         GroupId: b21dfa66-9e9d-48e6-bb31-03f257295017
+                    31a7e622302916306bc74a62c539efa4: !StaticColliderComponent
+                        Id: adf8c155-b8bb-46ad-b2bd-83eb2192a6fd
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5f17c480dbca0ff0e0966fcc40ea789d: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
